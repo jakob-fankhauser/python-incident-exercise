@@ -4,7 +4,27 @@
 This API processes purchase-order confirmations.
 Some requests fail. Investigate and fix the problem.
 
-The environment is already prepared. No installation is required.
+## Setup (please complete before the interview)
+
+**Option A – Browser (recommended, no installation):**
+Open https://codespaces.new/jakob-fankhauser/python-incident-exercise
+and wait until the setup has finished.
+
+**Option B – Local (Python 3.10+):**
+
+```bash
+git clone https://github.com/jakob-fankhauser/python-incident-exercise.git
+cd python-incident-exercise
+python -m venv .venv
+# Windows: .venv\Scripts\Activate.ps1
+# macOS/Linux: source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Without Git: use **Code → Download ZIP** instead of `git clone`.
+
+**Check:** `python -m pytest -v` must show **2 passed**.
+Please don't start the exercise in advance.
 
 ## Start
 Run the existing tests:
