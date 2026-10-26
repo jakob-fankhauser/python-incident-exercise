@@ -12,10 +12,6 @@ class Confirmation(BaseModel):
     po_number: str = Field(min_length=1)
     delivery_date: str = Field(min_length=1)
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
-
 @app.post("/confirmations")
 def confirm(payload: Confirmation):
     # Payload comes from an upstream document-extraction service.
