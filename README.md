@@ -4,27 +4,38 @@
 This API processes purchase-order confirmations.
 Some requests fail. Investigate and fix the problem.
 
-## Setup (please complete before the interview)
+## Setup
 
 **Option A – Browser (recommended, no installation):**
-Open https://codespaces.new/jakob-fankhauser/python-incident-exercise
-and wait until the setup has finished.
+Open https://codespaces.new/jakob-fankhauser/python-incident-exercise,
+click **Create codespace** and wait until the setup has finished.
 
 **Option B – Local (Python 3.10+):**
 
 ```bash
 git clone https://github.com/jakob-fankhauser/python-incident-exercise.git
 cd python-incident-exercise
-python -m venv .venv
-# Windows: .venv\Scripts\Activate.ps1
-# macOS/Linux: source .venv/bin/activate
+```
+
+Without Git: use **Code → Download ZIP** and unzip it.
+
+Windows (PowerShell):
+```powershell
+py -m venv .venv
+.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
 
-Without Git: use **Code → Download ZIP** instead of `git clone`.
+macOS/Linux:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+On Ubuntu/WSL you may first need: `sudo apt install python3-venv`
 
 **Check:** `python -m pytest -v` must show **2 passed**.
-Please don't start the exercise in advance.
 
 ## Start
 Run the existing tests:
