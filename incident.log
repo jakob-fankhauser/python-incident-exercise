@@ -1,0 +1,40 @@
+2026-10-26 14:48:45,628 INFO confirmations Confirmation processed po=4500012345
+2026-10-26 14:48:45,629 INFO httpx2 HTTP Request: POST http://testserver/confirmations "HTTP/1.1 200 OK"
+2026-10-26 14:48:45,635 ERROR confirmations Date processing failed po=4500012345
+Traceback (most recent call last):
+  File "/home/jakob/interview-exercise/candidate/app.py", line 26, in confirm
+    delivery = datetime.strptime(payload.delivery_date, "%Y-%m-%d").date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 333, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '15.11.2026' does not match format '%Y-%m-%d'
+2026-10-26 14:48:45,637 INFO httpx2 HTTP Request: POST http://testserver/confirmations "HTTP/1.1 500 Internal Server Error"
+2026-10-26 14:48:45,642 INFO confirmations Confirmation processed po=4500012345
+2026-10-26 14:48:45,643 INFO httpx2 HTTP Request: POST http://testserver/confirmations "HTTP/1.1 200 OK"
+2026-10-26 14:48:45,648 ERROR confirmations Date processing failed po=4500012345
+Traceback (most recent call last):
+  File "/home/jakob/interview-exercise/candidate/app.py", line 26, in confirm
+    delivery = datetime.strptime(payload.delivery_date, "%Y-%m-%d").date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 333, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '15.11.2026' does not match format '%Y-%m-%d'
+2026-10-26 14:48:45,649 INFO httpx2 HTTP Request: POST http://testserver/confirmations "HTTP/1.1 500 Internal Server Error"
+2026-10-26 14:48:45,655 ERROR confirmations Date processing failed po=4500012345
+Traceback (most recent call last):
+  File "/home/jakob/interview-exercise/candidate/app.py", line 26, in confirm
+    delivery = datetime.strptime(payload.delivery_date, "%Y-%m-%d").date()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 554, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/_strptime.py", line 333, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '31.02.2026' does not match format '%Y-%m-%d'
+2026-10-26 14:48:45,656 INFO httpx2 HTTP Request: POST http://testserver/confirmations "HTTP/1.1 500 Internal Server Error"
